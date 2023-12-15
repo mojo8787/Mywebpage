@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact page with information and links to social media profiles">
+    <title>Contact Information</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        body {
+            background-image: url("GI.gif"); /* Replace with your actual GIF path */
+            height: 100%; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        .astronaut-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .icons a {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .icons img {
+            width: 32px;
+            height: auto;
+            margin: 0 5px;
+        }
+        /* Navigation Bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        /* Contact Form */
+        .contact-form {
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .contact-form input[type=text], .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        /* Dark/Light Mode Toggle */
+        .theme-switch {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#contact">Contact</a>
+    <!-- Add other navigation links here -->
+</div>
+
+<div class="container">
+    <h1>Contact Information</h1>
+    <img src="P.png" alt="Astronaut Pixel Art" class="astronaut-image">
+    <div class="icons">
+        <!-- Social media icons -->
+        <!-- ... existing icons ... -->
+    </div>
+    <p>Phone: Your phone number here</p>
+    <p>Address: Veletržní 817/93, 00 Brno-střed, Czech Republic</p>
+</div>
+
+<!-- Contact Form -->
+<div class="contact-form">
+    <form action="/submit-contact-form" method="post">
+        <label for="fname">Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your email..">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<!-- Dark/Light Mode Toggle -->
+<div class="theme-switch">
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<script>
+    function toggleTheme() {
+        // Simple theme toggle example
+        document.body.classList.toggle('dark-theme');
+    }
+</script>
+
+</body>
+</html>
